@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package maxnumber;
+
+// The greeting service definition.
+service Number {
+  // Sends a number
+  rpc sendNumber (stream NumberMesg) returns (stream NumberMesg) {}
+}
+
+// The request message containing the user's name.
+message NumberMesg {
+  int32 number = 1;
+}
